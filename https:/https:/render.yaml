@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: reaction-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python react-bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
